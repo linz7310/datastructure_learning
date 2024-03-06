@@ -1,5 +1,7 @@
 package com.lin.datastructure.queue;
 
+import java.util.Iterator;
+
 /**
  * 队列接口
  * @param <E> 队列中元素类型
@@ -41,4 +43,5 @@ public interface Queue<E> {
      * @return 满返回 true, 否则返回 false
      */
     boolean isFull();
+
 }
