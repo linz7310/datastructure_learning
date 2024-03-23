@@ -19,12 +19,13 @@ public class DynamicArray implements Iterable<Integer>{
     private int capacity = 8;
     private int[] array = {};
 
-    //    public int[] array() {
-//        return Arrays.copyOf(array, size);
-//    }
+        public int[] array() {
+        return Arrays.copyOf(array, size);
+    }
     public void addLast(int element) {
-        array[size] = element;
-        size++;
+//        array[size] = element;
+//        size++;
+        add(size,element);
     }
 
     /**
@@ -45,10 +46,11 @@ public class DynamicArray implements Iterable<Integer>{
            array = new int[capacity];
         }else if (size==capacity){
             capacity +=capacity>>1;
-        }
-        int newarray[] = new int[capacity];
+
+        int[] newarray = new int[capacity];
         System.arraycopy(array,0,newarray,0,size);
         array=newarray;
+        }
     }
 
 

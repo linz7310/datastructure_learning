@@ -31,7 +31,7 @@ public class LinkedListDeque<E> implements Deque<E>, Iterable<E> {
         if (isFull()) {
             return false;
         }
-        Node<E> a=sentinel;
+        Node<E> a=sentinel.prev;
         Node<E> b=sentinel;
         Node<E> added=new Node<>(a,e,b);
         a.next=added;

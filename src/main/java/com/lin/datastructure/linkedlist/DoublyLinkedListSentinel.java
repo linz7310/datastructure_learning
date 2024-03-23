@@ -73,14 +73,17 @@ public class DoublyLinkedListSentinel implements Iterable{
             }
             Node next = prev.next;
             Node inserted=new Node(prev,value,next);
-            next.prev=inserted;
             prev.next=inserted;
+            next.prev=inserted;
         }
     public void removeFirst() {
         remove(0);
     }
     public void removeLast(){
             Node last = tail.prev;
+            if (last==head){
+                throw  illegalIndex(0);
+            }
             Node prev = last.prev;
             prev.next=tail;
             tail.prev=prev;
