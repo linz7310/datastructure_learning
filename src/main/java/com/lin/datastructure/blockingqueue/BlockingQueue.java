@@ -14,7 +14,6 @@ package com.lin.datastructure.blockingqueue;
      <li>用条件变量让 poll 或 offer 线程进入<b>等待</b>状态，而不是不断循环尝试，让 CPU 空转</li>
  </ol>
  */
-
 public interface BlockingQueue<E> { // 阻塞队列
 
     void offer(E e) throws InterruptedException;

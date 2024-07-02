@@ -1,4 +1,4 @@
-package lin.datastructure.array;
+package com.lin.datastructure.array;
 
 import org.springframework.util.StopWatch;
 
